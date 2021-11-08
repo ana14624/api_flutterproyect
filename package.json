@@ -1,0 +1,20 @@
+{
+  "name": "Practica1_180644",
+  "version": "1.0.0",
+  "description": "Realizado por Anayeli Gonzalez Trejo, operaciones CRUD",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "Anayeli Gonzalez Trejo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
