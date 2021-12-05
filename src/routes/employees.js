@@ -42,11 +42,11 @@ router.get('/:id', (req, res) => {
   // INSERT An Employee Insertar un empleado
   router.post('/', (req, res) => {
     const {id, nombre, salario} = req.body;
-    console.log(id, nombre, salario);
+    console.log(id, nombre, salario, lat, long_);
     const query = `
-      CALL inserta_actualiza_empleado(?, ?, ?);
+      CALL inserta_actualiza_empleado(?, ?, ?,? ,?);
     `;
-    mysqlConnection.query(query, [id, nombre, salario], (err, rows, fields) => {
+    mysqlConnection.query(query, [id, nombre, salario, lat, long_], (err, rows, fields) => {
       if(!err) {
         res.json({status: 'Empleado insertado'});
       } else {
@@ -57,12 +57,12 @@ router.get('/:id', (req, res) => {
   });
   
   router.put('/:id', (req, res) => {
-    const { nombre, salario } = req.body;
+    const { nombre, salario, lat, long_ } = req.body;
     const { id } = req.params;
     const query = `
-      CALL inserta_actualiza_empleado(@?, @?, @?);
+      CALL inserta_actualiza_empleado(@?, @?, @?,@?, @?);
     `;
-    mysqlConnection.query(query, [id, nombre, salario], (err, rows, fields) => {
+    mysqlConnection.query(query, [id, nombre, salario, lat, long_], (err, rows, fields) => {
       if(!err) {
         res.json({status: 'Empleado actualizado'});
       } else {
