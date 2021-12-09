@@ -1,14 +1,14 @@
 {
-  "name": "Practica1_180644",
+  "name": "PracticaApi",
   "version": "1.0.0",
-  "description": "Realizado por Anayeli Gonzalez Trejo, operaciones CRUD",
+  "description": "Realizado por Anayeli Gonzalez Trejo y Ulises Pérez Morales, operaciones CRUD",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [],
-  "author": "Anayeli Gonzalez Trejo",
+  "author": "Anayeli y Ulises",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
